@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "exec": "node src/gerarCartoes"
+    "exec": "node src/gerarCartoes input/publicadores_exemplo.csv input/relatorios_exemplo.csv"
   },
   "repository": {
     "type": "git",
@@ -14,10 +14,9 @@
   "author": "Tiago Nascimento",
   "license": "MIT",
   "dependencies": {
+    "csv-parse": "^4.12.0",
     "ejs": "^3.1.5",
-    "html-pdf": "^2.2.0"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.4"
+    "html-pdf": "^2.2.0",
+    "node-csv": "^0.1.2"
   }
 }
