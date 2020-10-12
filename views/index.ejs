@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+    body {
+        font-family: "Times New Roman", Times, serif;
+    }
+
+    div.divContainer {
+        width: 570px;
+    }
+
+    div.unstyledTable {
+        border: 2px solid #000000;
+        width: 100%;
+    }
+
+    .divTable.unstyledTable .divTableCell,
+    .divTable.unstyledTable .divTableHead {
+        border: 1px solid #AAAAAA;
+    }
+
+    .divTable.unstyledTable .divTableBody .divTableCell {
+        font-size: 11px;
+    }
+
+    .divTable.unstyledTable .divTableHeading .divTableHead {
+        font-size: 12px;
+        font-weight: bold;
+    }
+
+    /* DivTable.com */
+    .divTable {
+        display: table;
+    }
+
+    .divTableRow {
+        display: table-row;
+    }
+
+    .divTableHeading {
+        display: table-header-group;
+    }
+
+    .divTableCell,
+    .divTableHead {
+        display: table-cell;
+        padding: 3px;
+    }
+
+    .divTableHeading {
+        display: table-header-group;
+    }
+
+    .divTableFoot {
+        display: table-footer-group;
+    }
+
+    .divTableBody {
+        display: table-row-group;
+    }
+
+    .divTableHead {
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    .divTableHeadAno {
+        width: 95px;
+    }
+    .divTableHeadOutros {
+        width: 60px;
+    }
+    .divTableHeadObs {
+        width: 175px;
+    }
+
+    table.cabecalho {
+        border-collapse: collapse; 
+        width: 100%;
+    }
+    tr.linha {
+        height: 18px;
+    }
+    td.coluna {
+        padding: 3px;
+        font-size: 11px;
+    }
+</style>
+
+<body>
+
+    <div class="divContainer">
+        <p style="text-align: center;"><strong>REGISTRO DE PUBLICADOR DE CONGREGA&Ccedil;&Atilde;O</strong></p>
+        <table border="0" class="cabecalho">
+            <tbody>
+                <tr class="linha">
+                    <td class="coluna" style="width: 100px"><strong>Nome:</strong></td>
+                    <td class="coluna" colspan="3"><%= publicador.nome %></td>
+                </tr>
+                <tr class="linha">
+                    <td class="coluna"><strong>Data de nascimento:</strong></td>
+                    <td class="coluna" style="width: 190px"><%= publicador.dtNascimento %></td>
+                    <td class="coluna" style="width: 110px"><strong>G&ecirc;nero</strong></td>
+                    <td class="coluna"><%= publicador.genero %></td>
+                </tr>
+                <tr class="linha">
+                    <td class="coluna"><strong>Data de batismo:</strong></td>
+                    <td class="coluna"><%= publicador.dtBatismo %></td>
+                    <td class="coluna"><strong>O.O ou Ungido:</strong></td>
+                    <td class="coluna"><%= publicador.ooUngido %></td>
+                </tr>
+                <tr class="linha">
+                    <td class="coluna"></td>
+                    <td class="coluna"></td>
+                    <td class="coluna"><strong>Privil&eacute;gio de Servi&ccedil;o:</strong></td>
+                    <td class="coluna"><%= publicador.privilegio %></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <br/><br/>
+
+        <div class="divTable unstyledTable">
+            <div class="divTableHeading">
+                <div class="divTableRow">
+                    <div class="divTableHead divTableHeadAno">Ano de Serviço<br/><%= anoServicoFrente %></div>
+                    <div class="divTableHead divTableHeadOutros">Publicações</div>
+                    <div class="divTableHead divTableHeadOutros">Vídeos mostrados</div>
+                    <div class="divTableHead divTableHeadOutros">Horas</div>
+                    <div class="divTableHead divTableHeadOutros">Revisitas</div>
+                    <div class="divTableHead divTableHeadOutros">Estudos bíblicos</div>
+                    <div class="divTableHead divTableHeadObs">Observações</div>
+                </div>
+            </div>
+            <div class="divTableBody">
+                <div class="divTableRow">
+                    <div class="divTableCell">Setembro</div>
+                    <div class="divTableCell">cell2_1</div>
+                    <div class="divTableCell">cell3_1</div>
+                    <div class="divTableCell">cell4_1</div>
+                    <div class="divTableCell">cell5_1</div>
+                    <div class="divTableCell">cell6_1</div>
+                    <div class="divTableCell">cell7_1</div>
+                </div>
+            </div>
+        </div>
+
+        <br/><br/>
+
+        <div class="divTable unstyledTable">
+            <div class="divTableHeading">
+                <div class="divTableRow">
+                    <div class="divTableHead divTableHeadAno">Ano de Serviço<br/><%= anoServicoVerso %></div>
+                    <div class="divTableHead divTableHeadOutros">Publicações</div>
+                    <div class="divTableHead divTableHeadOutros">Vídeos mostrados</div>
+                    <div class="divTableHead divTableHeadOutros">Horas</div>
+                    <div class="divTableHead divTableHeadOutros">Revisitas</div>
+                    <div class="divTableHead divTableHeadOutros">Estudos bíblicos</div>
+                    <div class="divTableHead divTableHeadObs">Observações</div>
+                </div>
+            </div>
+            <div class="divTableBody">
+                <div class="divTableRow">
+                    <div class="divTableCell">Setembro</div>
+                    <div class="divTableCell">cell2_1</div>
+                    <div class="divTableCell">cell3_1</div>
+                    <div class="divTableCell">cell4_1</div>
+                    <div class="divTableCell">cell5_1</div>
+                    <div class="divTableCell">cell6_1</div>
+                    <div class="divTableCell">cell7_1</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

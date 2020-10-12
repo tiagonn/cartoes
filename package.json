@@ -1,0 +1,24 @@
+{
+  "name": "cartoes",
+  "version": "1.0.0",
+  "description": "Uma simples aplicação node para gerar registros de publicadores de congregação",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node_modules/nodemon/bin/nodemon.js app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com-personal:tiagonn/cartoes.git"
+  },
+  "author": "Tiago Nascimento",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "html-pdf": "^2.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
