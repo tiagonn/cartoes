@@ -4,14 +4,15 @@
 <style>
     body {
         font-family: "Times New Roman", Times, serif;
+        font-size: 12px;
     }
 
     div.divContainer {
-        width: 570px;
+        width: 540px;
     }
 
     div.unstyledTable {
-        border: 2px solid #000000;
+        border: 1px solid #000000;
         width: 100%;
     }
 
@@ -21,11 +22,11 @@
     }
 
     .divTable.unstyledTable .divTableBody .divTableCell {
-        font-size: 11px;
+        font-size: 10px;
     }
 
     .divTable.unstyledTable .divTableHeading .divTableHead {
-        font-size: 12px;
+        font-size: 11px;
         font-weight: bold;
     }
 
@@ -45,7 +46,7 @@
     .divTableCell,
     .divTableHead {
         display: table-cell;
-        padding: 3px;
+        padding: 2px;
     }
 
     .divTableHeading {
@@ -66,13 +67,13 @@
     }
 
     .divTableHeadAno {
-        width: 95px;
+        width: 80px;
     }
     .divTableHeadOutros {
-        width: 60px;
+        width: 50px;
     }
     .divTableHeadObs {
-        width: 175px;
+        width: 210px;
     }
 
     table.cabecalho {
@@ -83,8 +84,8 @@
         height: 18px;
     }
     td.coluna {
-        padding: 3px;
-        font-size: 11px;
+        padding: 2px;
+        font-size: 10px;
     }
 </style>
 
@@ -95,24 +96,20 @@
         <table border="0" class="cabecalho">
             <tbody>
                 <tr class="linha">
-                    <td class="coluna" style="width: 100px"><strong>Nome:</strong></td>
-                    <td class="coluna" colspan="3"><%= publicador.nome %></td>
-                </tr>
-                <tr class="linha">
-                    <td class="coluna"><strong>Data de nascimento:</strong></td>
-                    <td class="coluna" style="width: 190px"><%= publicador.dtNascimento %></td>
-                    <td class="coluna" style="width: 110px"><strong>G&ecirc;nero</strong></td>
+                    <td class="coluna" style="width: 85px"><strong>Nome:</strong></td>
+                    <td class="coluna" style="width: 230px"><%= publicador.nome %></td>
+                    <td class="coluna" style="width: 90px"><strong>G&ecirc;nero</strong></td>
                     <td class="coluna"><%= publicador.genero %></td>
                 </tr>
                 <tr class="linha">
-                    <td class="coluna"><strong>Data de batismo:</strong></td>
-                    <td class="coluna"><%= publicador.dtBatismo %></td>
+                    <td class="coluna"><strong>Data de nascimento:</strong></td>
+                    <td class="coluna"><%= publicador.dtNascimento %></td>
                     <td class="coluna"><strong>O.O ou Ungido:</strong></td>
                     <td class="coluna"><%= publicador.ooUngido %></td>
                 </tr>
                 <tr class="linha">
-                    <td class="coluna"></td>
-                    <td class="coluna"></td>
+                    <td class="coluna"><strong>Data de batismo:</strong></td>
+                    <td class="coluna"><%= publicador.dtBatismo %></td>
                     <td class="coluna"><strong>Privil&eacute;gio de Servi&ccedil;o:</strong></td>
                     <td class="coluna"><%= publicador.privilegio %></td>
                 </tr>
