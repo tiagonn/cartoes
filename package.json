@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "exec": "node src/gerarCartoes input/publicadores.csv input/relatorios.csv",
-    "execExemplos": "node src/gerarCartoes input/publicadores_exemplo.csv input/relatorios_exemplo.csv"
+    "exec": "node src/gerarCartoes input/publicadores.csv input/relatórios.csv 2020/2021 2021/2022 2020-2022",
+    "execExemplos": "node src/gerarCartoes input/publicadores_exemplo.csv input/relatorios_exemplo.csv 2020/2021 2021/2022 2020-2022"
   },
   "repository": {
     "type": "git",

@@ -137,7 +137,7 @@
             <div class="divTableBody">
                 <% publicador.relatoriosAnoServicoFrente.forEach(item => { %>
                     <div class="divTableRow">
-                        <div class="divTableCell">Setembro</div>
+                        <div class="divTableCell"><%= item['Mês Extenso'] %></div>
                         <div class="divTableCell divTableCellCenter"><%= item['Publicações'] %></div>
                         <div class="divTableCell divTableCellCenter"><%= item['Vídeos'] %></div>
                         <div class="divTableCell divTableCellCenter"><%= item['Horas'] %></div>
@@ -166,15 +166,17 @@
                     </div>
                 </div>
                 <div class="divTableBody">
-                    <div class="divTableRow">
-                        <div class="divTableCell">Setembro</div>
-                        <div class="divTableCell">cell2_1</div>
-                        <div class="divTableCell">cell3_1</div>
-                        <div class="divTableCell">cell4_1</div>
-                        <div class="divTableCell">cell5_1</div>
-                        <div class="divTableCell">cell6_1</div>
-                        <div class="divTableCell">cell7_1</div>
-                    </div>
+                    <% publicador.relatoriosAnoServicoVerso.forEach(item => { %>
+                        <div class="divTableRow">
+                            <div class="divTableCell"><%= item['Mês Extenso'] %></div>
+                            <div class="divTableCell divTableCellCenter"><%= item['Publicações'] %></div>
+                            <div class="divTableCell divTableCellCenter"><%= item['Vídeos'] %></div>
+                            <div class="divTableCell divTableCellCenter"><%= item['Horas'] %></div>
+                            <div class="divTableCell divTableCellCenter"><%= item['Revisitas'] %></div>
+                            <div class="divTableCell divTableCellCenter"><%= item['Estudos Bíblicos'] %></div>
+                            <div class="divTableCell"><%= item['Observação'] %></div>
+                        </div>
+                    <% }); %>
                 </div>
             </div>
         <% } %>
