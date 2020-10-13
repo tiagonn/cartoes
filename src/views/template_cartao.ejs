@@ -49,6 +49,10 @@
         padding: 2px;
     }
 
+    .divTableCellCenter {
+        text-align: center;
+    }
+
     .divTableHeading {
         display: table-header-group;
     }
@@ -97,21 +101,21 @@
             <tbody>
                 <tr class="linha">
                     <td class="coluna" style="width: 85px"><strong>Nome:</strong></td>
-                    <td class="coluna" style="width: 230px"><%= publicador.nome %></td>
+                    <td class="coluna" style="width: 230px"><%= publicador['Nome Completo'] %></td>
                     <td class="coluna" style="width: 90px"><strong>G&ecirc;nero</strong></td>
-                    <td class="coluna"><%= publicador.genero %></td>
+                    <td class="coluna"><%= publicador['Gênero'] %></td>
                 </tr>
                 <tr class="linha">
                     <td class="coluna"><strong>Data de nascimento:</strong></td>
-                    <td class="coluna"><%= publicador.dtNascimento %></td>
+                    <td class="coluna"><%= publicador['Data de Nascimento'] %></td>
                     <td class="coluna"><strong>O.O ou Ungido:</strong></td>
-                    <td class="coluna"><%= publicador.ooUngido %></td>
+                    <td class="coluna"><%= publicador['Ungido ou O.O'] %></td>
                 </tr>
                 <tr class="linha">
                     <td class="coluna"><strong>Data de batismo:</strong></td>
-                    <td class="coluna"><%= publicador.dtBatismo %></td>
+                    <td class="coluna"><%= publicador['Data de Batismo'] %></td>
                     <td class="coluna"><strong>Privil&eacute;gio de Servi&ccedil;o:</strong></td>
-                    <td class="coluna"><%= publicador.privilegio %></td>
+                    <td class="coluna"><%= publicador['Privilégio de Serviço'] %></td>
                 </tr>
             </tbody>
         </table>
@@ -131,44 +135,49 @@
                 </div>
             </div>
             <div class="divTableBody">
-                <div class="divTableRow">
-                    <div class="divTableCell">Setembro</div>
-                    <div class="divTableCell">cell2_1</div>
-                    <div class="divTableCell">cell3_1</div>
-                    <div class="divTableCell">cell4_1</div>
-                    <div class="divTableCell">cell5_1</div>
-                    <div class="divTableCell">cell6_1</div>
-                    <div class="divTableCell">cell7_1</div>
-                </div>
+                <% publicador.relatoriosAnoServicoFrente.forEach(item => { %>
+                    <div class="divTableRow">
+                        <div class="divTableCell">Setembro</div>
+                        <div class="divTableCell divTableCellCenter"><%= item['Publicações'] %></div>
+                        <div class="divTableCell divTableCellCenter"><%= item['Vídeos'] %></div>
+                        <div class="divTableCell divTableCellCenter"><%= item['Horas'] %></div>
+                        <div class="divTableCell divTableCellCenter"><%= item['Revisitas'] %></div>
+                        <div class="divTableCell divTableCellCenter"><%= item['Estudos Bíblicos'] %></div>
+                        <div class="divTableCell"><%= item['Observação'] %></div>
+                    </div>
+                <% }); %>
             </div>
         </div>
 
         <br/><br/>
 
-        <div class="divTable unstyledTable">
-            <div class="divTableHeading">
-                <div class="divTableRow">
-                    <div class="divTableHead divTableHeadAno">Ano de Serviço<br/><%= anoServicoVerso %></div>
-                    <div class="divTableHead divTableHeadOutros">Publicações</div>
-                    <div class="divTableHead divTableHeadOutros">Vídeos mostrados</div>
-                    <div class="divTableHead divTableHeadOutros">Horas</div>
-                    <div class="divTableHead divTableHeadOutros">Revisitas</div>
-                    <div class="divTableHead divTableHeadOutros">Estudos bíblicos</div>
-                    <div class="divTableHead divTableHeadObs">Observações</div>
+        <% if (publicador.relatoriosAnoServicoVerso !== undefined) { %>
+
+            <div class="divTable unstyledTable">
+                <div class="divTableHeading">
+                    <div class="divTableRow">
+                        <div class="divTableHead divTableHeadAno">Ano de Serviço<br/><%= anoServicoVerso %></div>
+                        <div class="divTableHead divTableHeadOutros">Publicações</div>
+                        <div class="divTableHead divTableHeadOutros">Vídeos mostrados</div>
+                        <div class="divTableHead divTableHeadOutros">Horas</div>
+                        <div class="divTableHead divTableHeadOutros">Revisitas</div>
+                        <div class="divTableHead divTableHeadOutros">Estudos bíblicos</div>
+                        <div class="divTableHead divTableHeadObs">Observações</div>
+                    </div>
+                </div>
+                <div class="divTableBody">
+                    <div class="divTableRow">
+                        <div class="divTableCell">Setembro</div>
+                        <div class="divTableCell">cell2_1</div>
+                        <div class="divTableCell">cell3_1</div>
+                        <div class="divTableCell">cell4_1</div>
+                        <div class="divTableCell">cell5_1</div>
+                        <div class="divTableCell">cell6_1</div>
+                        <div class="divTableCell">cell7_1</div>
+                    </div>
                 </div>
             </div>
-            <div class="divTableBody">
-                <div class="divTableRow">
-                    <div class="divTableCell">Setembro</div>
-                    <div class="divTableCell">cell2_1</div>
-                    <div class="divTableCell">cell3_1</div>
-                    <div class="divTableCell">cell4_1</div>
-                    <div class="divTableCell">cell5_1</div>
-                    <div class="divTableCell">cell6_1</div>
-                    <div class="divTableCell">cell7_1</div>
-                </div>
-            </div>
-        </div>
+        <% } %>
     </div>
 </body>
 
