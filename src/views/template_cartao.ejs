@@ -53,6 +53,10 @@
         text-align: center;
     }
 
+    .divTableCellObs {
+        font-size: 7px;
+    }
+
     .divTableHeading {
         display: table-header-group;
     }
@@ -143,7 +147,7 @@
                         <div class="divTableCell divTableCellCenter"><%= item['Horas'] %></div>
                         <div class="divTableCell divTableCellCenter"><%= item['Revisitas'] %></div>
                         <div class="divTableCell divTableCellCenter"><%= item['Estudos Bíblicos'] %></div>
-                        <div class="divTableCell"><%= item['Observação'] %></div>
+                        <div class="divTableCell divTableCellObs"><%= item['Observação'] %></div>
                     </div>
                 <% }); %>
             </div>
@@ -174,7 +178,7 @@
                             <div class="divTableCell divTableCellCenter"><%= item['Horas'] %></div>
                             <div class="divTableCell divTableCellCenter"><%= item['Revisitas'] %></div>
                             <div class="divTableCell divTableCellCenter"><%= item['Estudos Bíblicos'] %></div>
-                            <div class="divTableCell"><%= item['Observação'] %></div>
+                            <div class="divTableCell divTableCellObs"><%= item['Observação'] %></div>
                         </div>
                     <% }); %>
                 </div>

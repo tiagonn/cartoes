@@ -45,11 +45,11 @@ module.exports = function(relatorios) {
         'Grupo': '',
         Publicador: '',
         Tipo: '',
-        'Publicações': totalPublicacoes / qtdeMeses,
-        'Vídeos': totalVideos / qtdeMeses,
-        Horas: totalHoras / qtdeMeses,
-        Revisitas: totalRevisitas / qtdeMeses,
-        'Estudos Bíblicos': totalEstudosBiblicos / qtdeMeses,
+        'Publicações': (totalPublicacoes / qtdeMeses).toFixed(2),
+        'Vídeos': (totalVideos / qtdeMeses).toFixed(2),
+        Horas: (totalHoras / qtdeMeses).toFixed(2),
+        Revisitas: (totalRevisitas / qtdeMeses).toFixed(2),
+        'Estudos Bíblicos': (totalEstudosBiblicos / qtdeMeses).toFixed(2),
         'Observação': ''
     });
 
